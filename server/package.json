@@ -1,0 +1,12 @@
+{
+  "name": "@agibank/feature-toggle-server",
+  "version": "1.0.0",
+  "description": "Feature toggle server using Unleash",
+  "main": "index.js",
+  "author": "Andreo Vieira <andreo.vieira@agibank.com.br>",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "unleash-server": "^3.1.7"
+  }
+}
