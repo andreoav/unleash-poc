@@ -3,15 +3,15 @@ version: '3.7'
 services:
   db:
     image: postgres
-    ports:
-      - 5432:5432
     environment:
       - POSTGRES_PASSWORD=unleash
       - POSTGRES_USER=unleash
       - POSTGRES_DB=unleash
+
   unleash:
-    image: unleashorg/unleash-server
-    ports:
+    build:
+      context: ./server
+    ports: 
       - 4242:4242
-    environment:
-      - DATABASE_URL=postgres://unleash:unleash@db:5432/unleash
+    depends_on:
+      - db

@@ -1,7 +1,7 @@
 const unleash = require('unleash-server');
 
 unleash.start({
-	databaseUrl: 'postgres://unleash:unleash@localhost:5432/unleash',
+	databaseUrl: 'postgres://unleash:unleash@db:5432/unleash',
 	enableLegacyRoutes: false,
 	preRouterHook: app => {
 		app.use('/api/client', (req, res, next) => {
